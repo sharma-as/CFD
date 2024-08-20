@@ -2,14 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Geometry
-L = 10 / 100
+L = 0.5
 N = 10
 dx = L / (N - 1)
 
-# BC and IC
+# Initial and Boundary Conditions
 T = np.zeros(N)
-Tb = 200
-Ttip = 20
+Tb = 2000
+Ttip = 100
 
 # Solution
 k = 100  # Number of iterations
@@ -22,7 +22,5 @@ for j in range(k):
     plt.xlabel('Node')
     plt.ylabel('Temperature')
     plt.title('Temperature Distribution')
-    plt.grid(True)
     plt.pause(0.01)  # Pause to allow dynamic plotting
-
 plt.show()
